@@ -21,6 +21,7 @@
    height: 250px;
    width: 70px;
    border-radius: 10px;
+   position: relative;
    transform: translateY(-150px);
    display: flex;
    justify-content: flex-end;
@@ -33,9 +34,10 @@
    border-radius: 70px 70px 30px 30px;
    background-color: #eee;
    box-shadow:  2px 2px 2px #888;
-   position: relative;
+   position: absolute;
+   right: 10px;
    transform: rotate(10deg);
-   transform-origin: 100% 0%;
+   transform-origin: 80% 0%;
    /* transition: transform 700ms ease-in-out; */
  }
    /* /* 
@@ -49,7 +51,7 @@ body:hover .bat{
  }
  
 #idd {
-   position: relative;
+   position: absolute;
    width: 7px;
    height: 40px;
    background-color: #dabd98;
@@ -64,11 +66,10 @@ body:hover .bat{
    height: 15px;
    border-radius: 50%;
    background-color: rgb(228, 83, 83);
-   position: relative;
+   position: fixed;
    top: 250px;
-   left: -30px;
+   left: 20px;
 }
-
 body:hover .ball {
    animation: anim 2s ease-out 1 normal;
    animation-fill-mode: forwards;
@@ -85,15 +86,15 @@ body:hover .ball {
 
 .jhankar-dadu {
    position: fixed;
-   height: 80px;
+   height: 60px;
    /* transform: translate(100px, -100px); */
-   bottom: 20%;
-   left: 30%;
+   top: 500px;
+   left: -320px;
    transition: transform .5s ease-out 1.3s;
 }
 
 body:hover .jhankar-dadu {
-   transform: translate(125px, -125px);
+   transform: translate(125px, -125px) scale(1.5);
 }
 
 .jhankar-dadu img {
@@ -103,15 +104,15 @@ body:hover .jhankar-dadu {
 @keyframes anim{
              0%{
                top: 250px;
-               left: -30px;
+               left: 20px;
              }
              25%{
                top: 100px;
-               left: -32px;
+               left: 24px;
              }
              40% {
                top: 5px;
-               left: -25px;
+               left: 20px;
              }
              
              100%{
